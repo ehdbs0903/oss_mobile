@@ -1,7 +1,6 @@
 package com.sal.oss_mobile;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
@@ -12,6 +11,13 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
+
+import android.Manifest;
+import android.content.pm.PackageManager;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+
 public class BarChartActivity extends AppCompatActivity {
     String data;
     String fileName, subFileName;
@@ -23,14 +29,26 @@ public class BarChartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_chart);
 
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.READ_EXTERNAL_STORAGE)) {
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                        1);
+            }
+        }
+        //읽기 권한 요청
+
         getSupportActionBar().setIcon(R.drawable.icon2);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        BarChart chart = findViewById(R.id.weightchart);
+        BarChart chart = (BarChart)findViewById(R.id.weightchart);
 
-        File dir = new File("/data/data/com.example.oss_mobile/files");
+        File dir = new File("/data/data/com.sal.oss_mobile/files");
+
         String[] filenames = dir.list();
+
         for(int i = 0; i < filenames.length; i++){
             subFileName = filenames[i].replace(".txt","");
             addArray(subFileName.substring(0,4) + "/" + subFileName.substring(4,5) + "/" +subFileName.substring(5));
@@ -69,5 +87,8 @@ public class BarChartActivity extends AppCompatActivity {
         }
         catch (Exception e) {
         }
+
     }
+
+
 }
