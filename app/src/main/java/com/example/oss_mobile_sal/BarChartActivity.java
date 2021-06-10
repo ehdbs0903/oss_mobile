@@ -9,11 +9,12 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 public class BarChartActivity extends AppCompatActivity {
     String data;
-    String fileName;
+    String fileName, subFileName;
     ArrayList weight = new ArrayList();
     ArrayList date = new ArrayList();
     int count = 0;
@@ -23,9 +24,12 @@ public class BarChartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bar_chart);
         BarChart chart = findViewById(R.id.weightchart);
 
-        addArray("2021/6/8");
-        addArray("2021/6/9");
-        addArray("2021/6/10");
+        File dir = new File("/data/data/com.example.oss_mobile_sal/files");
+        String[] filenames = dir.list();
+        for(int i = 0; i < filenames.length; i++){
+            subFileName = filenames[i].replace(".txt","");
+            addArray(subFileName.substring(0,4) + "/" + subFileName.substring(4,5) + "/" +subFileName.substring(5));
+        }
 
         BarDataSet bardataset = new BarDataSet(weight, "Weight");
         chart.animateY(3000);
