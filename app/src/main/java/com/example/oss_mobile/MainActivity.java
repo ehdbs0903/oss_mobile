@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
             String str = new String(fileData, "EUC-KR");
             String[] data = str.split("/");
-            return "몸무게:" + data[0] + "Kg  " + "/" + "  소모 칼로리:" + data[1] + "Kcal  " + "/" + "         소모 칼로리:" + data[2] + "Kcal";
+            return "몸무게:" + data[0] + "Kg  " + "/" + "  소모 칼로리:" + data[1] + "Kcal  " + "/" + "\n섭취 칼로리:" + data[2] + "Kcal";
         } catch (Exception e) {
             return "";
         }

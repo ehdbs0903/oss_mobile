@@ -67,6 +67,6 @@ public class StimulusActivity extends AppCompatActivity {
         };
 
         Timer timer = new Timer();
-        timer.schedule(tt, 0, 3000);
+        timer.schedule(tt, 0, 5000);
     }
 }

@@ -29,7 +29,7 @@ public class BarChartActivity extends AppCompatActivity {
 
         BarChart chart = findViewById(R.id.weightchart);
 
-        File dir = new File("/data/data/com.example.oss_mobile_sal/files");
+        File dir = new File("/data/data/com.example.oss_mobile/files");
         String[] filenames = dir.list();
         for(int i = 0; i < filenames.length; i++){
             subFileName = filenames[i].replace(".txt","");
