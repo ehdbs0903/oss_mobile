@@ -1,10 +1,9 @@
-package com.example.oss_mobile_sal;
+package com.example.oss_mobile;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;

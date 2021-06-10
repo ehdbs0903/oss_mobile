@@ -1,4 +1,4 @@
-package com.example.oss_mobile_sal;
+package com.example.oss_mobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 
 import android.os.Bundle;
-import android.view.Menu;
 
 import java.util.ArrayList;
 import java.util.List;

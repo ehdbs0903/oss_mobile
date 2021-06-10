@@ -1,7 +1,6 @@
-package com.example.oss_mobile_sal;
+package com.example.oss_mobile;
 
 import android.os.Bundle;
-import android.view.Menu;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 

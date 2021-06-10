@@ -1,4 +1,4 @@
-package com.example.oss_mobile_sal;
+package com.example.oss_mobile;
 
 import android.graphics.Rect;
 import android.view.View;

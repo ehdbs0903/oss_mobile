@@ -1,7 +1,6 @@
-package com.example.oss_mobile_sal;
+package com.example.oss_mobile;
 
 import android.os.Bundle;
-import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.github.mikephil.charting.charts.BarChart;
