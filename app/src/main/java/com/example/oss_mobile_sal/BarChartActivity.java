@@ -1,6 +1,7 @@
 package com.example.oss_mobile_sal;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.github.mikephil.charting.charts.BarChart;
@@ -22,6 +23,11 @@ public class BarChartActivity extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bar_chart);
+
+        getSupportActionBar().setIcon(R.drawable.icon2);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         BarChart chart = findViewById(R.id.weightchart);
 
         File dir = new File("/data/data/com.example.oss_mobile_sal/files");

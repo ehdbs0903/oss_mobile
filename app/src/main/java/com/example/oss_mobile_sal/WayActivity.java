@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SimpleItemAnimator;
 
 import android.os.Bundle;
+import android.view.Menu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,10 @@ public class WayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_way);
+
+        getSupportActionBar().setIcon(R.drawable.icon2);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         List<ExerciseData> exerciseList = new ArrayList<>();
         //1.푸쉬업

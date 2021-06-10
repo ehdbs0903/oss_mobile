@@ -1,6 +1,7 @@
 package com.example.oss_mobile_sal;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -14,7 +15,7 @@ public class StimulusActivity extends AppCompatActivity {
 
     TextView saying;
     Random random = new Random();
-    int rannum = random.nextInt(21);
+    int ranNum = random.nextInt(21);
     String[] wise = new String[100];
 
     LinearLayout back;
@@ -24,6 +25,10 @@ public class StimulusActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stimulus);
+
+        getSupportActionBar().setIcon(R.drawable.icon2);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         back = (LinearLayout)findViewById(R.id.layout);
         int num = random.nextInt(img.length);
@@ -57,13 +62,12 @@ public class StimulusActivity extends AppCompatActivity {
         TimerTask tt = new TimerTask() {
             @Override
             public void run() {
-                saying.setText(wise[rannum]);
-                rannum = random.nextInt(21);
+                saying.setText(wise[ranNum]);
+                ranNum = random.nextInt(21);
             }
         };
 
         Timer timer = new Timer();
-        timer.schedule(tt, 0, 2000);
+        timer.schedule(tt, 0, 3000);
     }
-
 }

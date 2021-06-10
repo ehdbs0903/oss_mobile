@@ -1,9 +1,13 @@
 package com.example.oss_mobile_sal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +34,11 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        setTitle("살뺄라그램");
+
+        getSupportActionBar().setIcon(R.drawable.icon2);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         edtWeight = findViewById(R.id.edtWeight);
         edtKcal = findViewById(R.id.edtKcal);
@@ -129,7 +137,6 @@ public class MainActivity2 extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "오류오류", Toast.LENGTH_SHORT).show();
         }
     }
-
 }
 
 
