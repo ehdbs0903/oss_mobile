@@ -5,12 +5,13 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"/>
+        tools:ignore="MissingConstraints" />
 
 
     <FrameLayout
@@ -24,7 +25,7 @@
         android:id="@+id/writeButton"
         android:layout_width="121dp"
         android:layout_height="59dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/left_btn_backgound"
         android:gravity="center"
         android:text="기록하기"
@@ -67,7 +68,7 @@
         app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
+        app:layout_constraintVertical_bias="0.76" />
 
     <TextView
         android:id="@+id/viewDatePick"
@@ -75,7 +76,7 @@
         android:layout_height="41dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="50dp"
         android:background="#FFFFFF"
         android:gravity="center_horizontal"
         android:text="TextView"
@@ -91,44 +92,38 @@
 
     <Button
         android:id="@+id/btnBarChart"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginBottom="15dp"
+        android:background="#f39999"
         android:text="Bar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnPieChart"
+        android:id="@+id/btnWay"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginBottom="15dp"
-        android:text="Pie"
+        android:background="#f39999"
+        android:text="Way"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnStimulus"
         app:layout_constraintStart_toEndOf="@+id/btnBarChart" />
 
     <Button
-        android:id="@+id/btnWay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="15dp"
-        android:text="Way"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnStimulus" />
-
-    <Button
         android:id="@+id/btnStimulus"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
+        android:background="#f39999"
         android:text="Stimulus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
